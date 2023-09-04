@@ -1136,7 +1136,7 @@ RxMatcherTest >> testRegex003 [
 RxMatcherTest >> testRegex004 [
 	self runRegex: #(':isVowel:'
 		'aei' true nil
-		'xyz' false nil)
+		'xpz' false nil)
 ]
 
 { #category : #'tests - extensions' }

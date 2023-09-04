@@ -441,7 +441,7 @@ RxParser >> quantifiedAtom: atom [
 	self match: $}.
 	atom isNullable
 		ifTrue: [ self signalNullableClosureParserError ].
-	(max isNotNil and: [ max < min ])
+	(max notNil and: [ max < min ])
 		ifTrue: [ self signalParseError: ('wrong quantifier, expected ', min asString, ' <= ', max asString) ].
 	^ RxsPiece new
 		initializeAtom: atom
