@@ -58,16 +58,16 @@ RxParser class >> initializeBackslashSpecials [
 	"self initializeBackslashSpecials"
 
 	(BackslashSpecials := Dictionary new)
-		at: $w put: (Association key: RxsPredicate value: #beWordConstituent);
-		at: $W put: (Association key: RxsPredicate value: #beNotWordConstituent);
-		at: $s put: (Association key: RxsPredicate value: #beSpace);
-		at: $S put: (Association key: RxsPredicate value: #beNotSpace);
-		at: $d put: (Association key: RxsPredicate value: #beDigit);
-		at: $D put: (Association key: RxsPredicate value: #beNotDigit);
-		at: $b put: (Association key: RxsContextCondition value: #beWordBoundary);
-		at: $B put: (Association key: RxsContextCondition value: #beNonWordBoundary);
-		at: $< put: (Association key: RxsContextCondition value: #beBeginningOfWord);
-		at: $> put: (Association key: RxsContextCondition value: #beEndOfWord)
+		at: $w put: (RxsPredicate -> #beWordConstituent);
+		at: $W put: (RxsPredicate -> #beNotWordConstituent);
+		at: $s put: (RxsPredicate -> #beSpace);
+		at: $S put: (RxsPredicate -> #beNotSpace);
+		at: $d put: (RxsPredicate -> #beDigit);
+		at: $D put: (RxsPredicate -> #beNotDigit);
+		at: $b put: (RxsContextCondition -> #beWordBoundary);
+		at: $B put: (RxsContextCondition -> #beNonWordBoundary);
+		at: $< put: (RxsContextCondition -> #beBeginningOfWord);
+		at: $> put: (RxsContextCondition -> #beEndOfWord)
 ]
 
 { #category : #utilities }
