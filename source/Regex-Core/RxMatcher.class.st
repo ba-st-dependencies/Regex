@@ -551,7 +551,7 @@ RxMatcher >> split: aString indicesDo: aBlock [
 
 	[ self searchStream: stream ] whileTrue: [
 		aBlock value: lastPosition+1 value: (self subBeginning: 1) first.
-		[ lastPosition < stream position ] assertWithDescription: 'Regex cannot match null string'.
+		self assert: [ lastPosition < stream position ] description: 'Regex cannot match null string'.
 		lastPosition := stream position ].
 
 	aBlock value: lastPosition + 1 value: aString size

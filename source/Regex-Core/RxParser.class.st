@@ -433,11 +433,11 @@ RxParser >> quantifiedAtom: atom [
 	lookahead = $,
 		ifTrue: [ min := 0 ]
 		ifFalse: [
-			max := min := (self inputUpToAny: ',}' errorMessage: ' no terminating "}"') asUnsignedInteger ].
+			max := min := (self inputUpToAny: ',}' errorMessage: ' no terminating "}"') asInteger ].
 	lookahead = $,
 		ifTrue: [
 			self next.
-			max := (self inputUpToAny: ',}' errorMessage: ' no terminating "}"') asUnsignedInteger ].
+			max := (self inputUpToAny: ',}' errorMessage: ' no terminating "}"') asInteger ].
 	self match: $}.
 	atom isNullable
 		ifTrue: [ self signalNullableClosureParserError ].
