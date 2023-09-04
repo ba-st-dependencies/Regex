@@ -1,0 +1,9 @@
+RwLoadSpecificationV2 {
+  #specName: 'Regex-CI',
+  #projectName : 'Regex',
+  #diskUrl : 'Regex',
+  #projectSpecFile : 'rowan/project.ston',
+  #componentNames : [
+    'Deployment'
+  ]
+}

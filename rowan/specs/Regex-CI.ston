@@ -1,0 +1,14 @@
+RwLoadSpecificationV2 {
+  #specName: 'Regex-CI',
+  #projectName : 'Regex',
+  #diskUrl : 'Regex',
+  #projectSpecFile : 'rowan/project.ston',
+  #componentNames : [
+    'Tests'
+  ],
+  #customConditionalAttributes : [
+    'tests',
+    'sunit'
+  ],
+  #comment : 'Loading spec for the continuous integration setup'
+}

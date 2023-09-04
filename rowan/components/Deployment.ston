@@ -1,0 +1,23 @@
+RwSimpleProjectLoadComponentV2 {
+  #name : 'Deployment',
+  #projectNames : [
+    'Buoy'
+  ],
+  #componentNames : [	],
+  #packageNames : [
+    'Regex-Core',
+    'Regex-Extensions',
+    'Regex-GS64-Extensions'
+  ],
+  #conditionalPackageMapSpecs : {
+    'gemstone' : {
+      'allusers' : {
+        #packageNameToPlatformPropertiesMap : {
+          'Regex-Core' : { 'symbolDictName' : 'Regex' },
+          'Regex-GS64-Extensions' : { 'symbolDictName' : 'Globals' },
+          'Regex-Extensions' : { 'symbolDictName' : 'Globals' }
+        }
+      }
+    }
+  }
+}
