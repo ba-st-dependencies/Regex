@@ -117,6 +117,12 @@ RxParser class >> signalSyntaxException: errorString at: errorPosition [
 	RegexSyntaxError signal: errorString at: errorPosition
 ]
 
+{ #category : #private }
+RxParser >> asUnsignedInteger: string [
+
+	^ string ifEmpty: [ nil ] ifNotEmpty: [ string asInteger ]
+]
+
 { #category : #'recursive descent' }
 RxParser >> atom [
 	"An atom is one of a lot of possibilities, see below."
@@ -433,11 +439,11 @@ RxParser >> quantifiedAtom: atom [
 	lookahead = $,
 		ifTrue: [ min := 0 ]
 		ifFalse: [
-			max := min := (self inputUpToAny: ',}' errorMessage: ' no terminating "}"') asInteger ].
+			max := min := self asUnsignedInteger: (self inputUpToAny: ',}' errorMessage: ' no terminating "}"') ].
 	lookahead = $,
 		ifTrue: [
 			self next.
-			max := (self inputUpToAny: ',}' errorMessage: ' no terminating "}"') asInteger ].
+			max := self asUnsignedInteger: (self inputUpToAny: ',}' errorMessage: ' no terminating "}"') ].
 	self match: $}.
 	atom isNullable
 		ifTrue: [ self signalNullableClosureParserError ].
