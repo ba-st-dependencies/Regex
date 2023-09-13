@@ -77,15 +77,15 @@ CharacterCollection >> prefixMatchesRegexIgnoringCase: regexString [
 ]
 
 { #category : #'*Regex-GS64-Extensions' }
-CharacterCollection >> regex: rxString matchesCollect: aBlock [
+CharacterCollection >> regex: regexString matchesCollect: aBlock [
 
-	^rxString asRegex matchesIn: self collect: aBlock
+	^regexString asRegex matchesIn: self collect: aBlock
 ]
 
 { #category : #'*Regex-GS64-Extensions' }
-CharacterCollection >> regex: rxString matchesDo: aBlock [
+CharacterCollection >> regex: regexString matchesDo: aBlock [
 
-	^rxString asRegex matchesIn: self do: aBlock
+	^regexString asRegex matchesIn: self do: aBlock
 ]
 
 { #category : #'*Regex-GS64-Extensions' }

@@ -12,7 +12,7 @@ as a dependency for GemStone/64.
 
 [![GitHub release](https://img.shields.io/github/release/ba-st-dependencies/Regex.svg)](https://github.com/ba-st-dependencies/Regex/releases/latest)
 [![Pharo 11](https://img.shields.io/badge/Pharo-11-informational)](https://pharo.org)
-[![GS64 3.6.6](https://img.shields.io/badge/GS64-3.6.6-informational)](https://gemtalksystems.com/products/gs64/)
+[![GS64 3.7.0](https://img.shields.io/badge/GS64-3.7.0-informational)](https://gemtalksystems.com/products/gs64/)
 
 This is a recursive regular expression matcher. Not strikingly efficient, but
 simple. Also, keeps track of matched sub-expressions.
