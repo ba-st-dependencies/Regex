@@ -12,7 +12,7 @@ jobs:
           - Pharo64-11
     name: ${{ matrix.smalltalk }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set up Smalltalk CI
         uses: hpi-swa/setup-smalltalkCI@v1
         with:
@@ -26,3 +26,4 @@ jobs:
         uses: codecov/codecov-action@v3
         with:
           name: Unit-Tests-${{matrix.smalltalk}}
+          token: ${{ secrets.CODECOV_TOKEN }}
